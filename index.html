@@ -554,15 +554,148 @@
   .reveal.visible { opacity:1; transform:translateY(0); }
 
   /* ── RESPONSIVE ── */
+  @media(max-width:1024px) {
+    section { padding:80px 24px; }
+    .feat-grid { grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+    .overview-grid { grid-template-columns:repeat(2,1fr); }
+  }
+
   @media(max-width:900px) {
     nav { padding:14px 24px; }
     .nav-links { display:none; }
     .tech-wrapper { grid-template-columns:1fr; }
     .tech-visual { display:none; }
+    .tech-ring { width:250px; height:250px; }
+    .tech-ring-inner { width:160px; height:160px; }
     .payment-timeline { flex-direction:column; gap:40px; }
     .payment-timeline::before { display:none; }
     .pay-step { padding-top:0; padding-left:96px; text-align:left; }
     .pay-circle { left:0; transform:none; position:absolute; }
+  }
+
+  @media(max-width:768px) {
+    nav { padding:12px 16px; }
+    .nav-logo { font-size:0.95rem; letter-spacing:1px; }
+    section { padding:60px 16px; }
+    .hero { padding:100px 16px 60px; }
+    .hero-badge { font-size:0.6rem; padding:6px 16px; }
+    .hero h1 { font-size:clamp(1.8rem,5vw,3rem); }
+    .hero-sub { font-size:0.95rem; margin:16px auto 32px; }
+    .hero-cta { gap:12px; }
+    .btn-primary, .btn-outline { padding:12px 28px; font-size:0.8rem; }
+    .section-title { font-size:clamp(1.4rem,3.5vw,2.2rem); margin-bottom:16px; }
+    .section-desc { font-size:0.9rem; margin-bottom:40px; }
+    .overview-grid { grid-template-columns:1fr; gap:20px; }
+    .ov-card { padding:24px 20px; }
+    .feat-grid { grid-template-columns:1fr; gap:20px; }
+    .feat-card { padding:28px 20px; }
+    .feat-card h3 { font-size:1rem; }
+    .feat-list li { font-size:0.8rem; padding:4px 0; }
+    .price-grid { grid-template-columns:1fr; gap:20px; }
+    .price-card { padding:32px 24px; }
+    .price-card.featured { transform:scale(1.02); }
+    .price-amount { font-size:2.2rem; }
+    .cta-inner { padding:60px 16px; }
+    .cta-inner h2 { font-size:clamp(1.4rem,3.5vw,2.2rem); }
+    .cta-inner p { font-size:0.9rem; }
+    footer { padding:28px 16px; }
+    .tech-tags { justify-content:center; }
+    .benefits-grid { grid-template-columns:repeat(2,1fr); gap:16px; }
+    .ben-item { padding:20px 16px; }
+    .ben-emoji { font-size:1.6rem; }
+  }
+
+  @media(max-width:640px) {
+    nav { padding:10px 12px; }
+    .nav-logo { font-size:0.9rem; }
+    .hero { padding:80px 12px 50px; min-height:100vh; }
+    .hero-badge { font-size:0.55rem; padding:5px 12px; margin-bottom:20px; }
+    .hero h1 { font-size:clamp(1.5rem,4.5vw,2.4rem); }
+    .hero-sub { font-size:0.85rem; margin:12px auto 24px; }
+    .hero-cta { gap:10px; flex-direction:column; width:100%; }
+    .btn-primary, .btn-outline { width:100%; padding:14px 20px; font-size:0.75rem; }
+    section { padding:50px 12px; }
+    .section-label { font-size:0.6rem; margin-bottom:8px; }
+    .section-title { font-size:clamp(1.2rem,3vw,1.8rem); margin-bottom:12px; }
+    .section-desc { font-size:0.85rem; margin-bottom:32px; }
+    .overview-grid { grid-template-columns:1fr; }
+    .ov-card { padding:20px 16px; }
+    .ov-icon { width:44px; height:44px; font-size:1.2rem; }
+    .ov-card h3 { font-size:0.9rem; }
+    .ov-card p { font-size:0.8rem; }
+    .feat-grid { grid-template-columns:1fr; }
+    .feat-card { padding:24px 16px; }
+    .feat-num { font-size:0.6rem; margin-bottom:12px; }
+    .feat-card h3 { font-size:0.95rem; gap:8px; }
+    .feat-list li { font-size:0.75rem; }
+    .price-grid { grid-template-columns:1fr; }
+    .price-card { padding:28px 20px; }
+    .price-icon { font-size:2rem; }
+    .price-amount { font-size:2rem; }
+    .price-label { font-size:0.6rem; }
+    .cta-inner { padding:50px 12px; }
+    .cta-inner h2 { font-size:clamp(1.2rem,3vw,1.8rem); margin-bottom:16px; }
+    .cta-inner p { font-size:0.85rem; margin-bottom:32px; }
+    .pay-step { padding-left:60px; }
+    .pay-circle { width:56px; height:56px; font-size:0.9rem; }
+    .pay-step h4 { font-size:0.9rem; }
+    .pay-step p { font-size:0.75rem; }
+    footer { padding:20px 12px; }
+    footer p { font-size:0.7rem; }
+    .benefits-grid { grid-template-columns:1fr; gap:12px; }
+    .ben-item { padding:16px 12px; }
+    .ben-emoji { font-size:1.4rem; margin-bottom:8px; }
+    .ben-item h4 { font-size:0.85rem; }
+    .ben-item p { font-size:0.7rem; }
+    .tech-tag { padding:6px 16px; font-size:0.7rem; }
+    .orb-wrap { width:300px; height:300px; }
+    .scroll-hint { bottom:24px; }
+  }
+
+  @media(max-width:480px) {
+    nav { padding:8px 10px; }
+    .nav-logo { font-size:0.8rem; letter-spacing:0.5px; }
+    .hero { padding:70px 10px 40px; }
+    .hero-badge { font-size:0.5rem; padding:4px 10px; margin-bottom:16px; }
+    .hero h1 { font-size:clamp(1.3rem,4vw,2rem); line-height:1.15; }
+    .hero-sub { font-size:0.8rem; margin:10px auto 20px; }
+    .hero-cta { gap:8px; }
+    .btn-primary, .btn-outline { padding:12px 18px; font-size:0.7rem; }
+    section { padding:40px 10px; }
+    .section-label { font-size:0.55rem; letter-spacing:2px; }
+    .section-title { font-size:clamp(1rem,2.8vw,1.6rem); }
+    .section-desc { font-size:0.8rem; }
+    .overview-grid { gap:16px; }
+    .ov-card { padding:16px 12px; }
+    .ov-icon { width:40px; height:40px; font-size:1.1rem; }
+    .ov-card h3 { font-size:0.85rem; margin-bottom:8px; }
+    .ov-card p { font-size:0.75rem; }
+    .feat-grid { gap:16px; }
+    .feat-card { padding:20px 14px; }
+    .feat-num { font-size:0.55rem; margin-bottom:10px; }
+    .feat-card h3 { font-size:0.9rem; margin-bottom:12px; }
+    .feat-list li { font-size:0.7rem; padding:3px 0; }
+    .price-card { padding:24px 16px; }
+    .price-icon { font-size:1.8rem; }
+    .price-amount { font-size:1.8rem; }
+    .price-label { font-size:0.55rem; margin-bottom:8px; }
+    .price-desc { font-size:0.8rem; margin-top:12px; }
+    .cta-inner { padding:40px 10px; }
+    .cta-inner h2 { font-size:clamp(1rem,2.8vw,1.6rem); }
+    .cta-inner p { font-size:0.8rem; margin-bottom:24px; }
+    .pay-step { padding-left:50px; }
+    .pay-circle { width:48px; height:48px; font-size:0.8rem; }
+    .pay-step h4 { font-size:0.85rem; }
+    .pay-step p { font-size:0.7rem; }
+    footer { padding:16px 10px; }
+    footer p { font-size:0.65rem; }
+    .benefits-grid { gap:10px; }
+    .ben-item { padding:12px 10px; }
+    .ben-emoji { font-size:1.2rem; }
+    .ben-item h4 { font-size:0.8rem; margin-bottom:6px; }
+    .ben-item p { font-size:0.65rem; }
+    .tech-tag { padding:5px 12px; font-size:0.65rem; }
+    .orb-wrap { width:220px; height:220px; display:none; }
   }
 </style>
 </head>
